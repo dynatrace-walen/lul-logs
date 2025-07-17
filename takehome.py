@@ -50,14 +50,14 @@ def log_rotation(log_dir):
     print_inode(rotated_log)
 
     # Rename current log to example-current_renamed
-    renamed_log = os.path.join(log_dir, "example-current_renamed")
+    renamed_log = os.path.join(log_dir, "example-current_renamed.log")
     os.rename(current_log, renamed_log)
 
     print("\nAfter renaming current log:")
     print_inode(renamed_log)
 
 def main():
-    log_rotation("C:/Users/henry.walen/OneDrive - Dynatrace/Desktop/TSE Notes/LogsLUL")
+    log_rotation("/var/log")
 
 if __name__ == "__main__":
     main()
